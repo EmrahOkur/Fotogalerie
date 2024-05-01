@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    border-bottom: 1px solid beige;
+    box-shadow: 1px 1px 3px rgb(95,93,93);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-color: azure;
+}
+h1{
+    color: black;
+    padding-right: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 50px;
+}
+
+img {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.imagecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px;
+}
+
+.imagebox {
+    width: 200px;
+    height: 150px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.imagebox:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    
+}
+
+.bigImgBox {
+    height: 500px;
+    width: 1000px;
+    object-fit: cover;
+    
+}
+
+
+.fullscreen {
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+::-webkit-scrollbar{
+    display:none;
+}
+
+.fullscreenbox {
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.close {
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+
+.close:hover {
+    filter: invert(1);
+    
+    
+    
+    
+}
+
+.arrow {
+    height: 40px;
+    cursor: pointer;
+    padding: 0 16px;
+    filter: invert(1);
+    transform: scale(1.1);
+    
+}
+
+.arrow:hover {
+    filter: invert(0);
+    background-color: bisque;
+    
+    
+    
+}
+
+.dnone {
+    display: none;
+}
+
+
+@media (max-width: 1440px) {
+    .bigImgBox {
+        height: 50vh;
+        
+    }
+}
+
+@media (max-width: 1100px) {
+    .bigImgBox {
+        height: 35vh;
+        
+    }
+}
+
+@media (max-width: 800px) {
+    .bigImgBox {
+        height: 25vh;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .bigImgBox {
+        height: 20vh;
+        
+    }
+    h1 {
+        padding-right: 0px;
+        
+    }
+
+    .fullscreenbox {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .bigImgBox {
+        width: 95%;
+        height: 20vh;
+        
+       
+        
+    }
+}
+
+
+.fullscreen,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
